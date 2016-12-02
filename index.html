@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Retrodigitalisierung :: mainzed Lunch Lectures : 2016 : Hochschule Mainz</title>
+
+    <!-- meta information -->
+    <meta name="author" content="Hans-Werner Bartz and Max Grüntgens and Dominik Kasper" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=800" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+
+    <!-- favicons -->
+    <link rel="shortcut icon" href="resources/img/favicon.png" />
+    <link rel="apple-touch-icon" href="resources/img/apple-touch-icon.png" />
+
+    <!-- CSS reset and grid -->
+    <link href="vendor/normalize/normalize-4.1.1.css" rel="stylesheet" />
+    <link href="vendor/skeleton/skeleton-2.0.4.css" rel="stylesheet" />
+
+    <!-- fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,600,600italic,400italic,700italic,800,800italic&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css" />
+
+    <!-- presentation styles -->
+    <link href="resources/css/style.css" rel="stylesheet" />
+
+    <!-- other libraries -->
+
+    <!-- chartist.js -->
+    <link rel="stylesheet" href="vendor/chartist/chartist.min-0.9.7.css" />
+
+    <!-- codemirror -->
+    <link rel="stylesheet" href="vendor/codemirror/lib/codemirror.css" />
+    <link rel="stylesheet" href="resources/css/codemirror-sparql.css" />
+
+    <!-- highlight.js -->
+    <link rel="stylesheet" href="vendor/highlight/styles/default.css" />
+
+    <!-- magnific popup -->
+    <link rel="stylesheet" href="vendor/magnific-popup/magnific-popup-1.1.0.css" />
+
+    <!-- js libs that need to be in head -->
+
+    <!-- greuler -->
+    <script src="vendor/d3/d3-3.5.6.js"></script>
+    <script src="vendor/cola/cola.v3.min.js"></script>
+    <script src="vendor/greuler/greuler-0.5.5.min.js"></script>
+
+    <!-- html5 dataset shim for IE -->
+    <script src="vendor/impress/html5-dataset.js" type="text/javascript"></script>
+</head>
+
+<body>
+
+    <div class="fallback-message">
+        <p>
+            Your browser <strong>doesn't support the features required</strong> by impress.mod.js,
+            so you are presented with a simplified version of this presentation.
+        </p>
+        <p>
+            For the best experience please use the latest <strong>Chrome</strong>, <strong>Safari</strong>
+            or <strong>Firefox</strong> browser.
+        </p>
+    </div>
+
+    <div id="impress">
+
+        <div class="step">
+            <h4>12.10.2016 | mainzed Lunch Lectures | Hochschule Mainz</h4>
+
+            <h1>Retro/Digitalisierung</h1>
+
+            <h2 class="red">Einblick in Theorie und Praxis - vom Bild des Textes zum Text</h2>
+
+	    <h4>Vortrag im Rahmen der <a href="http://mainzed.org/de/">mainzed</a> Lunch Lectures</h4>
+
+
+	    <h3 class="author_meta">
+                <strong>H.-W. Bartz (ADWL Mainz) | D. Kasper (ADWL Mainz) <br>
+                    <img src="https://pbs.twimg.com/profile_images/2689776011/79d319d590925b1e64631d7060d375dd_400x400.png" alt="Twitter" width="30" />
+                    <a href="http://www.digitale-akademie.de/" title="Institutional website">digitale-akademie.de</a> |
+                    <img src="https://upload.wikimedia.org/wikipedia/en/9/9f/Twitter_bird_logo_2012.svg" alt="Twitter" width="30" />
+                    <a href="https://twitter.com/digicademy" title="The Digital Academy of the Academy of Sciences and Literature on Twitter">@digicademy</a> |
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" alt="Twitter" width="30" />
+                    <a href="https://github.com/digicademy/DH16_VCS_B43" title="Presentation and code on GitHub">digicademy</a> |
+                    <a href="https://docs-iss.adwmainz.net/topics/retrodigitalisierung" title="Full text available on Docs@ISS">Docs@ISS</a>
+                    </strong>
+                    <hr class="black">
+                    <span class="license">
+                    Released under
+                    <a href="https://creativecommons.org/licenses/by/4.0/" title="Licensed under CC BY 4.0">CC BY 4.0</a> (Hans-Werner Bartz, Dominik Kasper; Digitale Akademie)
+                    </span>
+            </h3>
+        </div>
+
+        <div class="step">
+            <h2>Table of Contents</h2>
+            <ol>
+                <li>
+                    Einführung
+                </li>
+                <li>
+                    Prämissen: Genauigkeit, Genauigkeit, Genauigkeit
+                    <ul>
+                      <li>Bildmaterial</li>
+                      <li>Textmaterial</li>
+                      <li>Use-Cases für Bild-, Text- und Mischdigitalisierung</li>
+                    </ul>
+                </li>
+                <li>
+                    Konzeption und Durchführung
+                    <ul>
+                      <li>Planung des Digitalisierungs- und Projektworkflows</li>
+                      <li>Verfahrensweisen</li>
+                      <li>Beispiele aus der Praxis</li>
+                    </ul>
+                </li>
+                <li>Lernressourcen, Literaturhinweise &amp; Software</li>
+            </ol>
+        </div>
+
+        <div class="step">
+            <h1 class="red">01</h1>
+            <h2 class="line-height-one-five">
+                Einführung
+            </h2>
+        </div>
+
+        <div class="step">
+            <h2>Warum und wozu wird retrodigitalisiert?</h2>
+            <div class="row">
+                <ul>
+                  <li>Eine Strategie für die digitale (Online-)Bereitstellung gilt heute als Grundvoraussetzung bei der Beantragung/Verlängerung von geisteswissenschaftlichen Forschungsvorhaben</li>
+                  <li>In vielen Fällen liegen bereits nur gedruckt erschienen Ergebnisse vor, deren digitale Grundstufe nicht (mehr) existiert oder veraltet ist</li>
+                  <li><strong>Bereitstellung</strong> von nur gedruckt vorliegenden (älteren) Werken für die <strong>digitale Weiterverarbeitung</strong>, bspw.
+                  <ul>
+                    <li>für Online-Präsentation</li>
+                    <li>linguistische Korpusbildung</li>
+                    <li>Digitale Langzeitarchivierung</li>
+                    <li>...</li>
+                  </ul></li>
+                </ul>
+            </div>
+        </div>
+
+
+        <div class="step">
+            <div class="centered">
+                <h3>Definition</h3>
+                <blockquote>Als Retrodigitalisierung verstehen wir die Überführung analoger
+                  Text- und Bilddaten in ein elektronisches Format
+                  zum Zwecke der computergestützten Bereitstellung und Verarbeitung.</blockquote>
+            </div>
+        </div>
+
+
+        <div class="step">
+            <h1 class="red">02</h1>
+            <h2 class="line-height-one-five">
+                Prämissen
+            </h2>
+        </div>
+
+        <div class="step">
+            <h2>Bildmaterial</h2>
+            <div class="row">
+                <ul>
+                  <li><strong>Abbildung der Materialität</strong>
+                    <ul>
+                      <li>Farbtreue durch Abgleich mittels Farbstreifen</li>
+                      <li>Dokumentation der Proportionen durch Lineale</li>
+                      </ul>
+                    </li>
+                  <li>
+                    <li><strong>Zukunftssichere Datenformate, -qualität und -ablagemodalität</strong>
+                <ul>
+                    <li>hohe Auflösung (300+ DPI)</li>
+                    <li>verlustfreies Dateiformat (TIFF)</li>
+                    <li>Originale und Arbeitskopien</li>
+                </ul>
+                </li>
+                  <li><strong>Metadaten zu Identifikation und Erstellungs-Historie</strong>
+                    <ul>
+                      <li>Von Ersteller über Lagerort bis Material und Zustand</li>
+                      <li>Standards
+                        <ul>
+                          <li>International Press Telecommunications Council Information Interchange Model (IPTC IIC)</li>
+                          <li>IPTC Extensible Metadata Platform (XMP)</li>
+                          <li>Dublin Core Metadata Initiative (DCMI) Metadata Terms</li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="step">
+            <h2>Textmaterial</h2>
+            <div class="row">
+                <ul>
+                  <li><strong>Allgemeine Vorgaben</strong>
+                    <ul>
+                      <li>Vorlagengenauigkeit (99,998%)</li>
+                      <li>Erhalt textspezifischer Strukturen (Beispiel: Poesie vs. Archivmaterial)</li>
+                      <li>Sonderzeichen nach Unicode</li>
+                      <li>Dateikodierung UTF-8</li>
+                      <li>Reintextformate</li>
+                    </ul>
+                  </li>
+                  <li><strong>Projektspezifische Vorgabe</strong>
+                    <ul>
+                      <li>Seiten- und Zeilengenauigkeit<li>
+                      <li>Typographie und spezifische Sonderzeichen (Grad der Semi-Diplomatik)</li>
+                      <li>Markierung von Entitäten (Personen, Orte, …)</li>
+                    </ul>
+                  </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="step">
+            <h2>Use-Cases</h2>
+            <h3>für Bild-, Text- und Misch-Digitalisierung</h3>
+            <div class="row">
+                <ol>
+                  <li>Glasfenster, Bilderarchiv, Archivierung ohne Recherchebedarf</li>
+                  <li>Wissenschaftl. Publikation, Rechnungsbücher, statistisches Material</li>
+                  <Li>Illuminierte Codices, wissenschaftl. Publikation mit Abb.</li>
+                </ol>
+            </div>
+        </div>
+
+        <div class="step">
+            <h1 class="red">03</h1>
+            <h2 class="line-height-one-five">
+                Konzeption und Durchführung
+            </h2>
+        </div>
+
+        <div class="step">
+            <h2>Planung des Digitalisierungs- und Projektworkflows</h2>
+            <div class="row">
+                <ol>
+                  <li>im Haus: Hardwareaustattung (Bibliotheksscanner mit Buchwippe), Software, Arbeitsstunden, Expertise</li>
+                  <li>außer Haus: Rundum-sorglos-Paket (externe Anbieter), Expertise</li>
+                  <Li>Mischform: Erfassung extern, Aufbereitung intern, Expertise</li>
+                </ol>
+                <ul>
+                  <li>Expertise bedeutet …
+                  <ul>
+                  <li>… Übersicht über die Besonderheiten des Textes auf Zeichen-, Wort- und Formatierungsebene (Sonderzeichen, Stand der Orthographie bei Trennungen, Textanordnung).</li>
+                  <li>… Hardwarekenntnisse (Scanner); Softwarekenntnisse (OCR-Programm, Tools für die Aufbereitung des OCR-Ergebnisses).</li>
+                </ul>
+                </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="step">
+            <h2>Verfahrensweisen</h2>
+            <div class="row">
+                <ul>
+                  <li>Double-Keying bzw. Triple-Keying</li>
+                    <ul>
+                      <li>benötigt Personal zum Abtippen</li>
+                      <li>Nachbearbeitung (Prüfen Diff) notwendig</li>
+                      <li>…</li>
+                    </ul>
+                  <li>Optical Character Recognition (OCR)
+                    <ul>
+                      <li>benötigt hochauflösende und präparierte Scans</li>
+                      <li>benötigt spezialisierte Software</li>
+                      <li>Muss angepasst (Sprache, Typographie) und “trainiert” werden</li>
+                      <li>Problematisch bei Mischschriften (Antiqua+Fraktur) oder bei abweichenden Schriftschnitten</li>
+                    </ul>
+                  </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="step">
+            <h2>Beispiele aus der Praxis</h2>
+            <div class="row">
+                <ol>
+                  <li>Goethes Biographica</li>
+                  <li>Schule von Salamanca</li>
+                  <Li>Ein Werkzeug zur Bearbeitung und Qualitätskontrolle: TUSTEP</li>
+                </ol>
+            </div>
+        </div>
+
+        <div class="step">
+            <h1 class="red">04</h1>
+            <h2 class="line-height-one-five">
+                Lernressourcen, Literaturhinweise &amp; Software
+            </h2>
+        </div>
+
+        <div class="step">
+
+            <h4>Literature</h4>
+
+            <ul class="small pull-up">
+                <li>
+                    DFG-Vordruck 12.151 – 02/13 – <a href="http://www.dfg.de/formulare/12_151/12_151_de.pdf">Praxisregeln „Digitalisierung“</a> (10/2016)
+                </li>
+                <li>
+                    <a href="http://archiv.ub.uni-heidelberg.de/volltextserver/12397/1/Technik011206_opt.pdf">Parschik, Thomas: Durchführung von Digitalisierungsprojekten in Bibliotheken. In: Bibliotheksdienst 40 (2006), Heft 12, S. 1421–1443</a>
+                </li>
+                <li>
+                  Piotrowski, Michael: Natural Language Processing for Historical Texts. San Rafael 2012. Insbesondere Kapitel 4 Acquiring Historical Texts, S. 25–52. (<a href="https://books.google.de/books?id=DSrqT5Zd_KwC&pg=PA145&dq=piotrowski+natural+language+processing#v=onepage&q&f=false">Google Books</a>)
+                </li>
+            </ul>
+
+            <h4>Präsentations-Software</h4>
+
+            <ul class="small pull-up">
+                <li>
+                    <a href="https://github.com/impress/impress.js">Impress.js</a> (Präsentation)
+                </li>
+                <li>
+                    <a href="http://getskeleton.com/">Skeleton CSS</a> (CSS Boilerplate)
+                </li>
+              </ul>
+              <h4>Software zu Text-Aufbereitung (Auswahl)</h4>
+              <ul class="small pull-up">
+                <li>
+                  <a href="https://wiki.ubuntuusers.de/Texterkennung/">OCR-Software unter Linux (Übersichtsseite)</a>
+                </li>
+                <li>
+                    <a href="https://www.perl.org/">Perl</a>
+                </li>
+                <li>
+                    <a href="https://www.python.org/">Python 3</a>
+                </li>
+                <li>
+                    <a href="http://www.tustep.uni-tuebingen.de/">TUSTEP</a>
+                </li>
+            </ul>
+
+            <h4>Download</h4>
+            <ul class="small pull-up">
+                <li>
+                    <a href="https://docs-iss.adwmainz.net/topics/retrodigitalisierung">
+                        Lesefassung unter Docs@ISS
+                    </a>
+                </li>
+                <li>
+                    License: <a href="https://creativecommons.org/licenses/by/4.0/">CC-BY 4.0</a>, Hans-Werner Bartz, Max Grüntgens, Dominik Kasper (alle Digitale Akademie der Akademie der Wissenschaften und der Literatur | Mainz)
+                </li>
+            </ul>
+        </div>
+
+    </div>
+
+    <!-- js libs -->
+
+    <!-- chartist -->
+    <script src="vendor/chartist/chartist.min-0.9.7.js"></script>
+
+    <!-- codemirror -->
+    <script src="vendor/codemirror/lib/codemirror.js"></script>
+    <script src="vendor/codemirror/mode/sparql/sparql.js"></script>
+
+    <!-- highlight -->
+    <script src="vendor/highlight/highlight.pack-9.3.0.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+
+    <!-- jquery -->
+    <script src="vendor/jquery/jquery-1.11.0.min.js"></script>
+
+    <!-- magnific popup -->
+    <script src="vendor/magnific-popup/jquery.magnific-popup.min-1.1.0.js"></script>
+    <script src="resources/js/magnific-popup.lightbox.js"></script>
+
+    <!-- sgvizler -->
+    <script src="vendor/sgvizler/sgvizler.fork.js"></script>
+
+    <!-- impress.mod.js -->
+    <script src="vendor/impress/impress.fork.js"></script>
+    <script src="vendor/impress/impress-slidenum.js"></script>
+    <script>
+        var obj = impress();
+        obj.init();
+        initSlideNo(obj);
+    </script>
+
+</body>
+</html>
