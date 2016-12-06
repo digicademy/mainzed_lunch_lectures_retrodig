@@ -272,6 +272,10 @@ em {
 	font-style: italic;
 }
 
+.normal {
+	font-style: normal;
+}
+
 sub, sup {
 	font-size: 75%;
 	line-height: 0;
@@ -309,6 +313,70 @@ CLASSES FOR SPECIAL LAYOUT/TYPOGRAPHY
 	hyphens: auto;
 }
 
+.up-25 {
+	margin-top: -25px;
+}
+
+.up-50 {
+	margin-top: -50px;
+}
+
+.up-75 {
+	margin-top: -75px;
+}
+
+.up-100 {
+	margin-top: -100px;
+}
+
+.down-25, .before-25 {
+	margin-top: 25px;
+}
+
+.down-50, .before-50 {
+	margin-top: 50px;
+}
+
+.down-75, .before-75 {
+	margin-top: 75px;
+}
+
+.down-100, .before-100 {
+	margin-top: 100px;
+}
+
+.after-25 {
+	margin-bottom: 25px;
+}
+
+.after-50 {
+	margin-bottom: 50px;
+}
+
+.after-75 {
+	margin-bottom: 75px;
+}
+
+.after-100 {
+	margin-bottom: 100px;
+}
+
+.pull-25 {
+	margin-bottom: -25px;
+}
+
+.pull-50 {
+	margin-bottom: -50px;
+}
+
+.pull-75 {
+	margin-bottom: -75px;
+}
+
+.pull-75 {
+	margin-bottom: -100px;
+}
+
 .medium, .medium li {
 	font-size: 20px;
 }
@@ -323,6 +391,9 @@ CLASSES FOR SPECIAL LAYOUT/TYPOGRAPHY
 
 .small {
 	font-size: 16px;
+}
+.x-small {
+	font-size: 12px;
 }
 
 .small li {
